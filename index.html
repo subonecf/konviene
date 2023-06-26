@@ -1,0 +1,451 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.5;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .section-1 {
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+        }
+
+        .section-1-2 {
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+        }
+
+        .image-section {
+            position: relative;
+            width: 100%;
+            background-image: url('./img/bg-1.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+            color: #000;
+            text-align: center;
+        }
+
+        .split-section {
+            display: flex;
+            color: #fff;
+            text-align: center;
+        }
+
+        .split-section .left {
+            background-color: #000;
+            flex: 50%;
+            padding: 50px;
+        }
+
+        .split-section .right {
+            background-color: #d3d3d3;
+            /* Gris claro */
+            flex: 50%;
+            padding: 50px;
+        }
+
+        /* card */
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+
+        .card-row {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: -1;
+        }
+
+        .card-row::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to right, #FCF3E1 0%, #FCF3E1 100%, transparent 100%);
+            z-index: -1;
+        }
+
+        .section-card {
+            flex: 0 0 30%;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+            z-index: -1;
+        }
+
+        .section-card::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            border: 2px solid #333;
+            background-color: #fff;
+            z-index: -1;
+        }
+
+        .card-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            color: #333;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .card-content {
+            padding-top: 200px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            position: static; /* Cambio la posición a static */
+        }
+
+
+        .card-description {
+            font-size: 14px;
+        }
+
+        /* card 2 */
+
+
+        .card-row-2{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: -1;
+        }
+
+        .card-row-2::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #f8f8f8 0%, #f8f8f8 100%, transparent 100%);
+            z-index: -1;
+        }
+
+        .section-card-2 {
+            flex: 0 0 30%;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+            z-index: -1;
+            border-right: 1px solid black;
+        }
+
+        .section-card-2::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            z-index: -1;
+        }
+
+        .card-icon-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            color: #333;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .card-content-2 {
+            padding-top: 200px;
+        }
+
+        .card-title-2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            position: static; /* Cambio la posición a static */
+        }
+
+
+        .card-description-2 {
+            font-size: 14px;
+        }
+
+        /* carrusel */
+
+        .carousel {
+    position: relative;
+    width: 100%;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #333;
+}
+
+.carousel__button--left {
+    left: 10px;
+}
+
+.carousel__button--right {
+    right: 10px;
+}
+
+.carousel__track {
+    display: flex;
+    width: 100%;
+}
+
+.carousel__slide {
+    flex: 0 0 100%;
+    display: none;
+}
+
+.carousel__slide.current-slide {
+    display: block;
+}
+.title_cr{
+    padding: 1em;
+    text-align: center;
+    color: #000;
+}
+
+.image{
+    height: 300px;
+    width: 300px;
+}
+
+
+        /* social media */
+
+.social_media{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+   /* footer */
+
+.footer{
+    padding: 2.5em;
+    background-color: orange;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Menú</h1>
+    </div>
+    <div class="section-1">
+        <h1>Konviene</h1>
+    </div>
+    <div class="image-section">
+        <h1>Calidad a un click de distancia</h1>
+        <p>Alta gama italiana por plazos de pagos económicos</p>
+    </div>
+    <div class="section-1-2">
+        <h2>Konviene</h2>
+    </div>
+    <div class="split-section">
+        <div class="left">
+            <h2>Konviene Mexico</h2>
+        </div>
+        <div class="right">
+            <h2>Konviene Mexico</h2>
+        </div>
+    </div>
+    <div class="section-1-2">
+        <h2>Cómo funciona</h2>
+    </div>
+    <div class="container">
+        <div class="card-row">
+            <div class="section-card">
+                <div class="card">
+                    <div class="card-icon">
+                        <span class="material-symbols-outlined">&#xe558;</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Título 1</h3>
+                    <p class="card-description">Descripción corta 1</p>
+                </div>
+            </div>
+            <div class="section-card">
+                <div class="card">
+                    <div class="card-icon">
+                        <span class="material-symbols-outlined">&#xe558;</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Título 2</h3>
+                        <p class="card-description">Descripción corta 2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-card">
+                <div class="card">
+                    <div class="card-icon">
+                        <span class="material-symbols-outlined">&#xe558;</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Título 3</h3>
+                        <p class="card-description">Descripción corta 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-row-2">
+            <div class="section-card-2">
+                <div class="card-2">
+                    <div class="card-icon-2">
+                        <span class="material-symbols-outlined">&#xe558;</span>
+                    </div>
+                    <div class="card-content-2">
+                        <h3 class="card-title">Título 4</h3>
+                        <p class="card-description">Descripción corta 4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-card-2">
+                <div class="card-2">
+                    <div class="card-icon-2">
+                        <span class="material-symbols-outlined">&#xe558;</span>
+                    </div>
+                    <div class="card-content-2">
+                        <h3 class="card-title">Título 4</h3>
+                        <p class="card-description">Descripción corta 4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-card-2">
+                <div class="card-2">
+                    <div class="card-icon-2">
+                        <span class="material-symbols-outlined">&#xe558;</span>
+                    </div>
+                    <div class="card-content-2">
+                        <h3 class="card-title">Título 4</h3>
+                        <p class="card-description">Descripción corta 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        
+        <div class="section-carrusel">
+            <h2 class="title_cr">Proximamente</h2>
+            <div class="carousel">
+                <button class="carousel__button carousel__button--left" id="prevBtn">
+                    &#10094;
+                </button>
+            
+                <div class="carousel__track-container">
+                    <div class="carousel__track" id="carouselTrack">
+                        <div class="carousel__slide current-slide">
+                            <img class="carousel__image image" src="img/bg-1.jpg" alt="Image 1">
+                        </div>
+                        <div class="carousel__slide">
+                            <img class="carousel__image image" src="img/carrusel-2.jpg" alt="Image 2">
+                        </div>
+                        <div class="carousel__slide">
+                            <img class="carousel__image image" src="img/carrusel-3.jpg" alt="Image 3">
+                        </div>
+                        <!-- Add as many slides as you have images -->
+                    </div>
+                </div>
+            
+                <button class="carousel__button carousel__button--right" id="nextBtn">
+                    &#10095;
+                </button>
+            </div>
+        </div>
+
+        <div class="section-social">
+            <h2 class="title_cr">Siguenos @KonvieneMexico</h2>
+
+            <div class="social_media">
+      
+                    <div class="">
+                        <img class="image" src="img/bg-1.jpg" alt="Image 1">
+                    </div>
+                    <div class="">
+                        <img class="image" src="img/carrusel-2.jpg" alt="Image 2">
+                    </div>
+                    <div class="">
+                        <img class="image" src="img/carrusel-3.jpg" alt="Image 3">
+                    </div>
+                    <!-- Add as many slides as you have images -->
+              
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>se el primero en <br/> formar parte de los <br/> beneficios de la <br/> familia <br/> @KonvieneMexico</p>
+            
+
+        </div>
+
+    </div>
+       
+   
+  <script src="js/scrpt.js"></script>
+    
+</body>
+</html>
+
+
+

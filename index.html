@@ -43,12 +43,7 @@
             padding: 1.5em;
         }
 
-        .section-1-2 {
-            background-color: #fff;
-            color: #000;
-            text-align: center;
-            padding: 2em;
-        }
+     
 
         .image-section {
             position: relative;
@@ -295,7 +290,6 @@
 
     .carousel-item img {
       max-width: 100%;
-      max-height: 250px;
       object-fit: contain;
     }
     .inline-images img {
@@ -317,12 +311,18 @@
     .footer p {
       margin: 0;
     }
+    .custom-container {
+      width: 90%;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     </style>
 </head>
 
 <body>
-    <header class="header">
+    <header class="header container custom-container mt-5">
         <nav class="navbar navbar-dark ">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Konviene</a>
@@ -343,14 +343,12 @@
           </nav>
       </header>
          
-      <section class="my-5">
-        
-      </section>
-    <div class="section-1">
+     
+    <div class="container text-center p-5">
         <h2>Konviene</h2>
     </div>
 
-    <div class="image-section d-flex flex-column align-items-start justify-content-center">
+    <div class="image-section container custom-container d-flex flex-column align-items-start justify-content-center">
         <div class="container d-flex flex-column align-items-start ">
             <h1>Calidad a un click de distancia</h1>
             <h5>Alta gama italiana por plazos de pagos económicos</h5>
@@ -359,7 +357,7 @@
     </div>
 
     <section class="my-5">
-        <div class="container">
+        <div class="container  custom-container">
                
             <div class="mt-5 text-center mb-5">
                 <h2>Konviene</h2>
@@ -378,7 +376,7 @@
         </section>
    
 
-    <div class="container">
+    <div class="container custom-container">
         <div class="mt-5 text-center mb-5">
             <h2>Como funciona</h2>
         </div>

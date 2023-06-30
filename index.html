@@ -8,7 +8,16 @@
     <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
     <!-- <link rel="stylesheet" href="/css/style.css"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <style>
+
+
+        /* Header */
+
+
+
+
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -16,6 +25,8 @@
             box-sizing: border-box;
             line-height: 1.5;
             min-height: 100vh;
+            height: 100%;
+        
         }
 
         .header {
@@ -29,12 +40,14 @@
             background-color: #fff;
             color: #000;
             text-align: center;
+            padding: 1.5em;
         }
 
         .section-1-2 {
             background-color: #fff;
             color: #000;
             text-align: center;
+            padding: 2em;
         }
 
         .image-section {
@@ -65,11 +78,12 @@
             /* Gris claro */
             flex: 50%;
             padding: 50px;
+            color: #000;
         }
 
         /* card */
 
-        .container {
+        .container-card {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -89,7 +103,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 50%;
+            height: 80%;
             background: linear-gradient(to right, #FCF3E1 0%, #FCF3E1 100%, transparent 100%);
             z-index: -1;
         }
@@ -128,15 +142,14 @@
             transform: translate(-50%, -50%);
         }
 
-        .card-content {
-            padding-top: 200px;
-        }
+       
 
         .card-title {
             font-size: 18px;
             font-weight: bold;
-            margin-bottom: 10px;
-            position: static; /* Cambio la posición a static */
+            margin-bottom: 1em;
+         
+            /* Cambio la posición a static */
         }
 
 
@@ -160,7 +173,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 50%;
             background: linear-gradient(to right, #f8f8f8 0%, #f8f8f8 100%, transparent 100%);
             z-index: -1;
         }
@@ -188,6 +201,7 @@
         .card-icon-2 {
             display: flex;
             justify-content: center;
+       
             align-items: center;
             font-size: 32px;
             color: #333;
@@ -197,6 +211,11 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+
+        .card-content{
+            z-index: -1;
+        }
+
 
         .card-content-2 {
             padding-top: 200px;
@@ -273,118 +292,163 @@
 }
    /* footer */
 
-.footer{
-    padding: 2.5em;
-    background-color: orange;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-}
 
+    .carousel-item img {
+      max-width: 100%;
+      max-height: 250px;
+      object-fit: contain;
+    }
+    .inline-images img {
+      max-width: 100%;
+      max-height: 250px;
+      object-fit: contain;
+    }
+    .footer {
+      background-color: orange;
+      padding: 20px 0;
+      text-align: center;
+      color: #000;
+      margin-top: 3em;
+      margin-bottom: 3em;
+      height: 300px;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer p {
+      margin: 0;
+    }
 
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <h1>Menú</h1>
-    </div>
+    <header class="header">
+        <nav class="navbar navbar-dark ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Konviene</a>
+          
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+              <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                <!-- ml-auto still works just fine-->
+                <div class="navbar-nav ml-auto">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link" href="#">Features</a>
+                  <a class="nav-link" href="#">Pricing</a>
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+      </header>
+         
+      <section class="my-5">
+        
+      </section>
     <div class="section-1">
-        <h1>Konviene</h1>
-    </div>
-    <div class="image-section">
-        <h1>Calidad a un click de distancia</h1>
-        <p>Alta gama italiana por plazos de pagos económicos</p>
-    </div>
-    <div class="section-1-2">
         <h2>Konviene</h2>
     </div>
-    <div class="split-section">
-        <div class="left">
-            <h2>Konviene Mexico</h2>
-        </div>
-        <div class="right">
-            <h2>Konviene Mexico</h2>
-        </div>
-    </div>
-    <div class="section-1-2">
-        <h2>Cómo funciona</h2>
-    </div>
-    <div class="container">
-        <div class="card-row">
-            <div class="section-card">
-                <div class="card">
-                    <div class="card-icon">
-                        <span class="material-symbols-outlined">&#xe558;</span>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Título 1</h3>
-                    <p class="card-description">Descripción corta 1</p>
-                </div>
-            </div>
-            <div class="section-card">
-                <div class="card">
-                    <div class="card-icon">
-                        <span class="material-symbols-outlined">&#xe558;</span>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Título 2</h3>
-                        <p class="card-description">Descripción corta 2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section-card">
-                <div class="card">
-                    <div class="card-icon">
-                        <span class="material-symbols-outlined">&#xe558;</span>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Título 3</h3>
-                        <p class="card-description">Descripción corta 3</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card-row-2">
-            <div class="section-card-2">
-                <div class="card-2">
-                    <div class="card-icon-2">
-                        <span class="material-symbols-outlined">&#xe558;</span>
-                    </div>
-                    <div class="card-content-2">
-                        <h3 class="card-title">Título 4</h3>
-                        <p class="card-description">Descripción corta 4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section-card-2">
-                <div class="card-2">
-                    <div class="card-icon-2">
-                        <span class="material-symbols-outlined">&#xe558;</span>
-                    </div>
-                    <div class="card-content-2">
-                        <h3 class="card-title">Título 4</h3>
-                        <p class="card-description">Descripción corta 4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section-card-2">
-                <div class="card-2">
-                    <div class="card-icon-2">
-                        <span class="material-symbols-outlined">&#xe558;</span>
-                    </div>
-                    <div class="card-content-2">
-                        <h3 class="card-title">Título 4</h3>
-                        <p class="card-description">Descripción corta 4</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      
+
+    <div class="image-section d-flex flex-column align-items-start justify-content-center">
+        <div class="container d-flex flex-column align-items-start ">
+            <h1>Calidad a un click de distancia</h1>
+            <h5>Alta gama italiana por plazos de pagos económicos</h5>
         
+        </div>
+    </div>
+
+    <section class="my-5">
+        <div class="container">
+               
+            <div class="mt-5 text-center mb-5">
+                <h2>Konviene</h2>
+            </div>
+            <div class="split-section">
+                <div class="left d-flex flex-column align-items-start justify-content-center">
+                    <h2 class="ml-5">Konviene </h2>
+                    <h2 class="ml-5">México </h2>
+                </div>
+                <div class="right">
+                    <h4 class="text-left pb-3">Mejor aliado de las familias mexicanas</h4>
+                    <p class="text-left">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+                </div>
+            </div>
+        </div>
+        </section>
+   
+
+    <div class="container">
+        <div class="mt-5 text-center mb-5">
+            <h2>Como funciona</h2>
+        </div>
+ 
+            <section class="my-5">
+              <div class="row">
+              
+                <div class="col-md-4  card-row d-flex flex-column align-items-center">
+                    <div class="text-center border border-dark p-5 bg-white mb-4">
+                        <span class="material-symbols-outlined">&#xe558;</span>
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <h4>Título de la sección</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, veniam. Inventore dolor deserunt nostrum quod repellat error cupiditate, harum molestiae, ipsam fuga sapiente excepturi repudiandae exercitationem fugit alias quae? Quidem.</p>
+                </div>
+                </div>
+                <div class="col-md-4  card-row d-flex flex-column align-items-center">
+                    <div class="text-center border border-dark p-5 bg-white mb-4">
+                        <span class="material-symbols-outlined">&#xe558;</span>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <h4>Título de la sección</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, veniam. Inventore dolor deserunt nostrum quod repellat error cupiditate, harum molestiae, ipsam fuga sapiente excepturi repudiandae exercitationem fugit alias quae? Quidem.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4  card-row d-flex flex-column align-items-center">
+                    <div class="text-center border border-dark p-5 bg-white mb-4">
+                        <span class="material-symbols-outlined">&#xe558;</span>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <h4>Título de la sección</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, veniam. Inventore dolor deserunt nostrum quod repellat error cupiditate, harum molestiae, ipsam fuga sapiente excepturi repudiandae exercitationem fugit alias quae? Quidem.</p>
+                    </div>
+                  </div>
+                  <div class="row mt-5">
+              
+                    <div class="col-md-4 d-flex  flex-column align-items-center">
+                        <div class="text-center p-5 bg-white mb-4">
+                            <span class="material-symbols-outlined">&#xe558;</span>
+                      </div>
+                      <div class="col-md-12 pl-1 pr-1  text-center">
+                        <h4>Título de la sección</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, veniam. Inventore dolor deserunt nostrum quod repellat error cupiditate, harum molestiae, ipsam fuga sapiente excepturi repudiandae exercitationem fugit alias quae? Quidem.</p>
+                      </div>
+                    </div>
+                    <div class="col-md-4 d-flex  border-left border-right border-dark flex-column align-items-center">
+                        <div class="text-center p-5 bg-white mb-4">
+                            <span class="material-symbols-outlined">&#xe558;</span>
+                        </div>
+                        <div class="col-md-12 pl-1 pr-1 text-center">
+                            <h4>Título de la sección</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, veniam. Inventore dolor deserunt nostrum quod repellat error cupiditate, harum molestiae, ipsam fuga sapiente excepturi repudiandae exercitationem fugit alias quae? Quidem.</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4 d-flex flex-column align-items-center">
+                        <div class="text-center  p-5 bg-white mb-4">
+                            <span class="material-symbols-outlined">&#xe558;</span>
+                        </div>
+                        <div class="col-md-12  pl-1 pr-1 text-center">
+                            <h4>Título de la sección</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, veniam. Inventore dolor deserunt nostrum quod repellat error cupiditate, harum molestiae, ipsam fuga sapiente excepturi repudiandae exercitationem fugit alias quae? Quidem.</p>
+                        </div>
+                      </div>
+              </div>
+         
+
+            </section>
+          
+      
+<!--         
         <div class="section-carrusel">
             <h2 class="title_cr">Proximamente</h2>
             <div class="carousel">
@@ -403,7 +467,6 @@
                         <div class="carousel__slide">
                             <img class="carousel__image image" src="img/carrusel-3.jpg" alt="Image 3">
                         </div>
-                        <!-- Add as many slides as you have images -->
                     </div>
                 </div>
             
@@ -411,38 +474,122 @@
                     &#10095;
                 </button>
             </div>
+        </div> -->
+
+        <div class="mt-5 text-center mb-5">
+            <h2>Proximamente</h2>
+            <h5>Calidad italiana a tu mesa</54>
         </div>
-
-        <div class="section-social">
-            <h2 class="title_cr">Siguenos @KonvieneMexico</h2>
-
-            <div class="social_media">
-      
-                    <div class="">
-                        <img class="image" src="img/bg-1.jpg" alt="Image 1">
+        <div id="myCarousel" class="carousel slide" data-ride="false">
+            <!-- Slides -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-4">
+                    <img src="img/carrusel-3.jpg" alt="Imagen 1">
+                    <div class=" pl-3 pt-3 border">
+                        <h5>Producto 1</h5>
+                        <p>Precio: $10.00</p>
                     </div>
-                    <div class="">
-                        <img class="image" src="img/carrusel-2.jpg" alt="Image 2">
+                  </div>
+                
+                  <div class="col-4">
+                    <img src="img/carrusel-3.jpg" alt="Imagen 2">
+                    <div class=" pl-3 pt-3 border">
+                        <h5>Producto 1</h5>
+                        <p>Precio: $10.00</p>
                     </div>
-                    <div class="">
-                        <img class="image" src="img/carrusel-3.jpg" alt="Image 3">
+                  </div>
+                  <div class="col-4">
+                    <img src="img/carrusel-3.jpg" alt="Imagen 3">
+                    <div class="pl-3 pt-3 border">
+                        <h5>Producto 1</h5>
+                        <p>Precio: $10.00</p>
                     </div>
-                    <!-- Add as many slides as you have images -->
-              
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-4">
+                    <img src="img/carrusel-3.jpg"  alt="Imagen 4">
+                    <div class="pl-3 pt-3 border">
+                        <h5>Producto 1</h5>
+                        <p>Precio: $10.00</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <img src="img/carrusel-3.jpg" alt="Imagen 5">
+                    <div class="pl-3 pt-3 border">
+                        <h5>Producto 1</h5>
+                        <p>Precio: $10.00</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <img src="img/carrusel-3.jpg" alt="Imagen 6">
+                    <div class="pl-3 pt-3 border">
+                        <h5>Producto 1</h5>
+                        <p>Precio: $10.00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Agrega más slides aquí si tienes más imágenes -->
             </div>
+          
+            <!-- Flechas de navegación -->
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
 
+          <div class="mt-5 text-center mb-5">
+            <h2>Siguenos @KonvieneMexico</h2>
+            <h5>Calidad italiana a tu mesa</54>
         </div>
+    
+       
 
-        <div class="footer">
-            <p>se el primero en <br/> formar parte de los <br/> beneficios de la <br/> familia <br/> @KonvieneMexico</p>
+          
+                <div class="">
+                  <div class="row  inline-images">
+                    <div class="col-md-3">
+                      <img src="img/carrusel-3.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="col-md-3">
+                      <img src="img/carrusel-3.jpg" alt="Imagen 2">
+                    </div>
+                    <div class="col-md-3">
+                      <img src="img/carrusel-3.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="col-md-3">
+                      <img src="img/carrusel-3.jpg" alt="Imagen 4">
+                    </div>
+                  </div>
+                </div>
+        
+
+
+        <footer class="footer">
+            <div class="container">
+           
+                <div class="text-center">
+                    <p>se el primero en <br/> formar parte de los <br/> beneficios de la <br/> familia <br/> @KonvieneMexico</p>
+                </div>
             
-
-        </div>
+            </div>
+          </footer>
 
     </div>
        
-   
-  <script src="js/scrpt.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity=" sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin=" anonymous "></script>
+    <script src=" https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js " integrity=" sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/ " crossorigin=" anonymous "></script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+  
+    <script src="js/scrpt.js"></script>
     
 </body>
 </html>
